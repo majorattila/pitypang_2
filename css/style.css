@@ -10,6 +10,27 @@ body{
     font-size: 1.4em;
 }
 
+ul {
+    /* pötty eltüntetése */
+    list-style-type: none;
+    background-color: rgba(230, 230, 230, 0.5);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}
+
 #header {
     grid-area: header;
     background-image: url(../img/dandelion.jpg);
@@ -57,4 +78,16 @@ body{
     opacity: 1;
     /* animáció */
     transition: opacity 3s ease;
+}
+
+@media all and (max-width: 600px) {
+    #wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "nav"
+        "aside"
+        "footer"
+        "article";
+    }
 }
